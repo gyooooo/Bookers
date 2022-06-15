@@ -1,0 +1,22 @@
+<body>
+  
+<%= form_with model: @books do |f| %>
+  
+<p>
+  <strong>Title:</strong>
+   <%= f.text_field :title %>
+ 
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= f.text_area :body %>
+  
+</p>
+
+<%= link_to "Edit", edit_book_path(book.id)%>
+<%= link_to "Back", books_path(book.id)%>
+<% end %>
+  
+  <p id="notice"></p>
+</body>
