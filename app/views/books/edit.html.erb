@@ -14,12 +14,19 @@
   
 </p>
 
-<%= f.submit '投稿' %>
+<%= f.submit 'Update Book' %>
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>error prohibited this book from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <% end %>
-  
-<%= link_to "Edit", edit_book_path(@book.id)%>
-<%= link_to "Back", books_path(@book.id)%>
+<%= link_to "Show", book_path(@book.id)%>
+<%= link_to "Back", books_path%>
   
   <p id="notice"></p>
 </body>

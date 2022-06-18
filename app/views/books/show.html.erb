@@ -1,8 +1,18 @@
 <body>
-
- <table> 
-  <td><%= link_to "Edit", edit_book_path(@book.id)%></td>
-  <td><%= link_to "Back", book_path(@book.id)%></td>
- </table>
   
+<p>
+  Title:
+ <%= @book.title %>
+</p>
+
+<p>
+  Body:
+   <%= @book.body %>
+  </p>
+
+
+<%= link_to "Edit", edit_book_path(@book.id)%>
+<%= link_to "Back", books_path %>
+  
+  <p id="notice"></p>
 </body>
