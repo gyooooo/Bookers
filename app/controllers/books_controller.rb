@@ -33,10 +33,10 @@ class BooksController < ApplicationController
      if @book.destroy
      flash[:notice] = "Book was successfully destroyed."
      redirect_to books_path
-    else
+     else
     @books = Book.all
     render :index
-    end
+     end
   end
   
   def update
